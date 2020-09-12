@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
 import './App.css';
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Home from "./Home.js";
+import Header from "./Header.js";
+import Footer from "./Footer.js";
 import AnimalDetail from "./AnimalDetail.js";
 import AllAnimals from "./AllAnimals.js";
 import axios from "axios";
@@ -49,7 +52,7 @@ class App extends Component {
   //       });
   //     });
   };
-  
+
   // addArtist = (e) => {
   //   e.preventDefault();
   //   axios
@@ -68,19 +71,19 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
-        <nav>
-          <Link to="/">All Animals</Link>
-        </nav>
+      <div>
+        <Header />
         <main>
           <Switch>
-            <Route exact path="/" component={() => <AllAnimals animals = {this.state.animals} />} />
+            <Route exact path="/" component={() => <Home />} />
+            <Route path="/animals" component={() => <AllAnimals animals = {this.state.animals} />} />
             <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} addVaccination={this.addVaccination}/>} />
 
             {/* <Route exact path="/" component={() => <AllAnimals artists = {this.state.animals} addArtist={this.addArtist} />} />
             <Route path="/artists/:id" component={(routerProps) => <ArtistDetail {...routerProps} artists = {this.state.artists} addSong={this.addSong}/>} /> */}
           </Switch>
         </main>
+        <Footer />
       </div>
     );
     }

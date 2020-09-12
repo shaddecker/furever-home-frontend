@@ -4,10 +4,10 @@ body{
   width: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: black;
+  background-color: white;
 }
 .navContainer{
-  color: white;
+  color: grey;
   border: none;
   width: 100%;
 }
@@ -16,75 +16,76 @@ body{
   font-size: 14px;
   height:75px;
   width: 100%;
-  background-color: black;
+  background-color: white;
   display: grid;
-  grid-template-rows: 23px 23px 23px;
-  grid-template-columns: 20% 35% 15% 15% 15%;
+  grid-template-rows: 23px 23px 23px 23px;
+  grid-template-columns: 10% 10% 10% 40% 10% 10% 10%;
   padding: 10px;
-
 }
-.navSmall{
-  grid-row-start: 2;
-  grid-row-end: 2;
+.navtop{
+  grid-row-start: 1;
+  grid-row-end: 1;
   grid-column-start: 1;
-  grid-column-end: 1;
-  font-size: 10px;
-}
-.navTitle{
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  font-size: 30px;
-  font-weight: bold;
+  grid-column-end: 7;
+  background-color: darkgrey;
 }
 .nav1{
-  grid-row-start: 1;
+  grid-row-start: 2;
   grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  
 }
 .nav2{
   grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  
 }
 .nav3{
-  grid-row-start: 3;
+  grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 3;
+  
 }
-.nav4{
+.navTitle{
   grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 4;
-  grid-column-end: 4;
-}
-.nav5{
-  grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 4;
   grid-column-end: 4;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav5{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 5;
+  grid-column-end: 5;
 }
 .nav6{
   grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 5;
-  grid-column-end: 5;
+  grid-row-end: 3;
+  grid-column-start: 6;
+  grid-column-end: 6;
+  
 }
 .nav7{
-  grid-row-start: 3;
+  grid-row-start: 2;
   grid-row-end: 3;
-  grid-column-start: 5;
-  grid-column-end: 5;
+  grid-column-start: 7;
+  grid-column-end: 7;
+  
 }
+
 
 .container{
   background-color: grey;
-  color: white;
-  border: 1px solid black;
+  color: black;
+  border: 1px solid white;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -94,8 +95,8 @@ body{
 .containerHome{
   background-image: url("/images/universe.jpg");
   background-size: cover;    
-  color:white;
-  border: 1px solid black;
+  color:grey;
+  border: 1px solid white;
   width: 100vw;
   height: 75vh;
   padding: 20px;
@@ -106,38 +107,6 @@ body{
   height: 50%;
   width: 50%;
 }
-
-.containerAdvice{
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  grid-template-rows: 100px 1fr;
-  background-image: url("/images/charliebrownBack.jpg");
-  background-size: cover;
-  color: white;
-  border: 1px solid black;
-  width: 100vw;
-  height: 80vh;
-  padding: 20px;
-  position: absolute;
-}
-
-.containerAdvice img{
-  grid-row: 1 span 2;
-  grid-column: 1;
-}
-
-.containerAdvice .button{
-  grid-row: 1;
-  grid-column: 2;
-  max-width: 200px;
-}
-
-.containerAdvice .content{
-  grid-row: 2;
-  grid-column: 2;
-  color: black;
-}
-
 .containerTrivia{
   display: grid;
   grid-template-columns: 300px  450px 1fr;
@@ -305,23 +274,27 @@ body{
 }
 a:hover{
 text-decoration:none;
-color: white;
+color: black;
+font-weight: bolder;
 }
 a:visited{
   text-decoration:none;
-  color: white;
+  color: darkgrey;
+  font-weight: bolder;
 }
 a:link{
   text-decoration:none;
-  color: white;
+  color: darkgrey;
+  font-weight: bolder;
 }
 a:active{
   text-decoration:none;
-  color: white;
+  color: darkgrey;
+  font-weight: bolder;
 }
 
 .footerContainer{
-  background-color: black;    
+  background-color: white;    
   border: none;
   width: 100%;
   height: 75px;
@@ -336,7 +309,7 @@ a:active{
 }
 
 .footerTitle{
-  color: white;
+  color: black;
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 1;
