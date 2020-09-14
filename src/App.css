@@ -1,3 +1,6 @@
+@import "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans+Condensed:wght@300&family=Shadows+Into+Light&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Indie+Flower&family=Open+Sans+Condensed:wght@300&family=Shadows+Into+Light&display=swap";
 
 body{
   height: 100%;
@@ -6,19 +9,19 @@ body{
   padding: 0px;
   background-color: white;
   color: black;
+  font-family: "Open Sans Condensed";
+  font-size: 20px;
 }
 .navContainer{
-  color: grey;
+  color: white;
   border: none;
   width: 100%;
 }
-.nav{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
+.nav{  
   width: 100%;
   background-color: white;
   display: grid;
-  grid-template-rows: 30px 50px 40px; 
+  grid-template-rows: 30px 60px 40px; 
   grid-template-columns: 20% 20% 20% 20% 20%;
 }
 .navtop{
@@ -26,9 +29,11 @@ body{
   grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 6;
-  background-color: lightcoral;
+  background-color: rgb(57, 70, 182);
   color: white;
   border: none;
+  font-family: "Open Sans Condensed";
+  font-size: 16px;
   text-align: left;
   padding-top: 5px;
   padding-left: 5px;
@@ -38,14 +43,25 @@ body{
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 1;
-  grid-column-end: 6;
-  font-size: 30px;
-  font-weight: bold;
+  grid-column-end: 4;
+  font-family: "Indie Flower";
+  font-size: 50px;
+  font-weight: bolder;
   text-align: left;
   border: none;
   padding-left: 30px;
-  padding-top: 10px;
   color:black;
+  
+}
+.navLogo{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  text-align: center;
+  border: none;
+  padding-left: 30px;
+  color:black;  
 }
 .nav2{
   grid-row-start: 3;
@@ -54,10 +70,14 @@ body{
   grid-column-end: 1;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-top: lightgrey 1px solid;
-  border-bottom: lightgrey 1px solid;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
   text-align: center;
-
+  background-color: brown;
+  color:white;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bold;
 }
 .nav3{
   grid-row-start: 3;
@@ -66,9 +86,14 @@ body{
   grid-column-end: 2;
   padding-top:10px;
   padding-bottom: 10px;
-  border-top: lightgrey 1px solid;
-  border-bottom: lightgrey 1px solid;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
   text-align: center;
+  background-color: brown;
+  color:white;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bold;
 }
 .nav4{
   grid-row-start: 3;
@@ -77,9 +102,14 @@ body{
   grid-column-end: 3;
   padding-top:10px;
   padding-bottom: 10px;
-  border-top: lightgrey 1px solid;
-  border-bottom: lightgrey 1px solid;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
   text-align: center;
+  background-color: brown;
+  color:white;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bold;
 }
 .nav5{
   grid-row-start: 3;
@@ -88,9 +118,14 @@ body{
   grid-column-end: 4;
   padding-top:10px;
   padding-bottom: 10px;
-  border-top: lightgrey 1px solid;
-  border-bottom: lightgrey 1px solid;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
   text-align: center;
+  background-color: brown;
+  color:white;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bold;
 }
 .nav6{
   grid-row-start: 3;
@@ -99,13 +134,27 @@ body{
   grid-column-end: 5;
   padding-top:10px;
   padding-bottom: 10px;
-  border-top: lightgrey 1px solid;
-  border-bottom: lightgrey 1px solid;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
   text-align: center;
+  background-color: brown;
+  color:white;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bold;
+
 }
-
-
-
+.animalName{
+  font-family: "Amatic SC";
+  font-size: 50px;
+  font-weight: bold;
+}
+.sectionDetail{
+  color:black;
+  font-family: "Open Sans Condensed";
+  font-size: 20px;
+  font-weight: bold;
+}
 .container{
   background-color: grey;
   color: black;
@@ -116,186 +165,7 @@ body{
   position: absolute;
 }
 
-.containerHome{
-  background-image: url("/images/universe.jpg");
-  background-size: cover;    
-  color:grey;
-  border: 1px solid white;
-  width: 100vw;
-  height: 75vh;
-  padding: 20px;
-  position: absolute;
-}
 
-.containerHome img{
-  height: 50%;
-  width: 50%;
-}
-.containerTrivia{
-  display: grid;
-  grid-template-columns: 300px  450px 1fr;
-  grid-template-rows: 50px 100px 100px 1fr;
-  background-image: url("/images/jeopardy_logo.jpg");
-  background-size: cover;
-  color: white;
-  border: 1px solid black;
-  width: 100vw;
-  height: 80vh;
-  padding: 20px;
-  position: absolute;
-}
-
-.containerTrivia img{
-  grid-row: 1 span 2;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.triviaButton{
-  grid-row: 4;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.containerTrivia .contentTitle{
-  grid-row: 1;
-  grid-column: 2;
-}
-
-.containerTrivia .content{
-  grid-row: 2;
-  grid-column: 2;
-}
-
-.containerTrivia .contentHidden{
-  grid-row: 3;
-  grid-column: 2;
-}
-
-.containerTrivia .countDown{
-  grid-row: 1;
-  grid-column: 3;
-  max-width: 200px;
-}
-
-.containerCatDog{    
-  background-image: url("/images/catsanddogs.jpg");
-  background-size: cover; 
-  color: white;
-  border: 1px solid black;
-  width: 100vw;
-  height: 75vh;
-  padding: 20px;
-  position: absolute;
-}
-
-.containerCatDog .content{
-  color: rgb(0, 119, 128);
-  /* background-color: white; */
-  border-radius: 30px;
-  margin-top: 10px;
-}
-
-.containerChuck{
-  background-image: url("/images/chuck-norris.jpg");
-  background-size: cover;
-  color: white;
-  border: 1px solid black;
-  width: 100vw;
-  height: 80vh;
-  padding: 20px;
-  position: absolute;
-}
-.containerJokes{
-  background-image: url("/images/clown.jpg");
-  background-size: cover;
-  color: white;
-  border: 1px solid black;
-  width: 100vw;
-  height: 80vh;
-  padding: 20px;
-  position: absolute;
-}
-.containerIPFind{
-  background-image: url("/images/ipfind.jpg");
-  background-size: cover;
-  color: white;
-  border: 1px solid black;
-  width: 100vw;
-  height: 80vh;
-  padding: 20px;
-  position: absolute;
-}
-.button{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  height:25px;
-  width: auto;
-}
-
-.select{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  height:25px;
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-.countDown{
-  padding: 10px;
-  font-size:18px;
-  font-weight: bold;
-  color: red;
-  display: none;
-  background-color: white;
-}
-
-.content{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  font-size:18px;
-  margin-right: 10%;
-}
-
-.containerChuck .content{
-  background-color: black;
-}
-
-.contentXL{
-  padding-top: 40px;
-  padding-left: 20px;
-  font-size:100px;
-  font-weight: bold;
-}
-.contentSmall{
-  padding-top: 5px;
-  padding-left: 20px;
-  font-size:16px;
-  color: red;
-}
-.contentTitle{
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size:20px;
-  font-weight: bold;
-}
-.contentHidden{
-  padding: 20px;
-  font-size:18px;
-  display: none;
-}
-
-.modalWindow{
-  display: none;
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.modalContent{
-  background-color: white;
-  position: absolute;
-}
 a:hover{
 text-decoration:none;
 color: black;
@@ -303,28 +173,29 @@ font-weight: bolder;
 }
 a:visited{
   text-decoration:none;
-  color: darkgrey;
+  color: white;
   font-weight: bolder;
 }
 a:link{
   text-decoration:none;
-  color: darkgrey;
+  color: white;
   font-weight: bolder;
 }
 a:active{
   text-decoration:none;
-  color: darkgrey;
+  color: white;
   font-weight: bolder;
 }
 
 .footerContainer{
-  background-color: white;    
+  background-color: brown;    
   border: none;
   width: 100%;
   height: 75px;
   padding-left: 25px;
   padding-top: 15px;
   padding-right: 25px;
+  padding-bottom: 10px;
   position: fixed; 
   bottom: 0;
   display: grid;
@@ -333,7 +204,7 @@ a:active{
 }
 
 .footerTitle{
-  color: black;
+  color: white;
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 1;

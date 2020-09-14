@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./Home.js";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
@@ -77,12 +77,12 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path="/" component={() => <Home />} />
-            <Route path="/animals" component={() => <AllAnimals animals = {this.state.animals} />} />
+            <Route exact path="/animals" component={() => <AllAnimals animals = {this.state.animals} />} />
             <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} addVaccination={this.addVaccination}/>} />
 
             {/* <Route exact path="/" component={() => <AllAnimals artists = {this.state.animals} addArtist={this.addArtist} />} />
             <Route path="/artists/:id" component={(routerProps) => <ArtistDetail {...routerProps} artists = {this.state.artists} addSong={this.addSong}/>} /> */}
-            <Route path="/*" render={() => <Redirect to="/" />} />
+            {/* <Route path="/*" render={() => <Redirect to="/" />} /> */}
 
           </Switch>
         </main>

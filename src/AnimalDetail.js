@@ -9,25 +9,33 @@ class AnimalDetail extends Component{
       return animal.id === parseInt(this.props.match.params.id);      
     });
     console.log(animalDetail);
-    console.log(animalDetail.Vaccinations)
-    // const vaccinations = animalDetail.Vaccinations.map(vac => {
-    //   return <li key={vaccinations.id}>Bordetella - {vaccinations.bordetella}</li>;
-    // });
+    const vac = animalDetail.Vaccinations[0]
+    const tests = animalDetail.Tests[0]
+    const adopt = animalDetail.Adoptions[0]
 
-    
     return (
-      <div className="App">
+      <div>
         <main>
-          <h1>Animal Details</h1>
-          <h3>{animalDetail.name}</h3>
-          <h5>Add a New Vaccination</h5>
-          {/* <form onSubmit={this.props.addVaccination}>
-          <input type="hidden" name="artistId" value={animalDetail.id} />
-          <input type="text" name="title" />
-          <input type="submit" value="Add Song" />
-        </form> */}
-          <ul>{animalDetail.Vaccinations}</ul>
-        </main>
+          <div class="animalName">{animalDetail.name}</div>
+          <div class="sectionTitle">Vaccinations:</div>
+          <ul class="sectionDetail"> 
+            <li key={vac.Bordetella}>Bordetella - {vac.bordetella ? `True`:`False`}</li>
+            <li key={vac.Rabies}>Rabies - {vac.rabies ? `True`:`False`}</li>
+            <li key={vac.Distemper}>Distemper - {vac.distemper ? `True`:`False`}</li>
+            <li key={vac.Hepatitis}>Hepatitis - {vac.hepatitis ? `True`:`False`}</li>
+            <li key={vac.Parvovirus}>Parvovirus - {vac.parvovirus ? `True`:`False`}</li>
+            <li key={vac.Parainfluenza}>Parainfluenza - {vac.parainfluenza ? `True`:`False`}</li>
+            <li key={vac.Leptospirosis}>Leptospirosis - {vac.leptospirosis ? `True`:`False`}</li>
+            <li key={vac.Coronavirus}>Coronavirus - {vac.coronavirus ? `True`:`False`}</li>
+            <li key={vac.Lyme}>Lyme - {vac.lyme ? `True`:`False`}</li>
+            <li key={vac.Felineluekemia}>Felineluekemia - {vac.felineluekemia ? `True`:`False`}</li>
+            <li key={vac.Rhinotracheitis}>Rhinotracheitis - {vac.rhinotracheitis ? `True`:`False`}</li>
+            <li key={vac.Calicivirus}>Calicivirus - {vac.calicivirus ? `True`:`False`}</li>
+          </ul>
+          <div class="sectionTitle">NOTES:</div>
+          <div class="sectionDetail">{vac.notes}</div>
+          
+          </main>
       </div>
     );
     }
