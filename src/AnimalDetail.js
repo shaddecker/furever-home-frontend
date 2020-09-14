@@ -10,15 +10,15 @@ class AnimalDetail extends Component{
     });
     console.log(animalDetail);
     const vac = animalDetail.Vaccinations[0]
-    const tests = animalDetail.Tests[0]
-    const adopt = animalDetail.Adoptions[0]
+    // const tests = animalDetail.Tests[0]
+    // const adopt = animalDetail.Adoptions[0]
 
     return (
       <div>
         <main>
-          <div class="animalName">{animalDetail.name}</div>
-          <div class="sectionTitle">Vaccinations:</div>
-          <ul class="sectionDetail"> 
+          <div className="animalName">{animalDetail.name}</div>
+          <div className="sectionTitle">Vaccinations:</div>
+          <ul className="sectionDetail"> 
             <li key={vac.Bordetella}>Bordetella - {vac.bordetella ? `True`:`False`}</li>
             <li key={vac.Rabies}>Rabies - {vac.rabies ? `True`:`False`}</li>
             <li key={vac.Distemper}>Distemper - {vac.distemper ? `True`:`False`}</li>
@@ -32,8 +32,8 @@ class AnimalDetail extends Component{
             <li key={vac.Rhinotracheitis}>Rhinotracheitis - {vac.rhinotracheitis ? `True`:`False`}</li>
             <li key={vac.Calicivirus}>Calicivirus - {vac.calicivirus ? `True`:`False`}</li>
           </ul>
-          <div class="sectionTitle">NOTES:</div>
-          <div class="sectionDetail">{vac.notes}</div>
+          <div className="sectionTitle">NOTES:</div>
+          <div className="sectionDetail">{vac.notes}</div>
           
           </main>
       </div>
