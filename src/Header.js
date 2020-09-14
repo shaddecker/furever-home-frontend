@@ -6,19 +6,19 @@ import './App.css';
 
 const Header = () => {
   return (
+    <nav>
     <div className="navContainer">
-      <nav className="nav">
-        <div className="navtopv">Tracking the well being of our shelter animals</div>        
-        <div className="nav1"><Link to='/animals'>All Animals</Link></div>
-        <div className="nav2"></div>
-        <div className="nav3"></div>
+      <div className="nav">
+        <div className="navtop">Otter Creek Animal Shelter | Hazelton, IA | 319-636-2061 | info@ottercreekanimalshelter.org</div>        
         <div className="navTitle">Furever Home</div>
-        <div className="nav4"></div>
-        <div className="nav5"></div>
-        <div className="nav6"></div>
-        <div className="nav7"></div>
-      </nav>
+        <div className="nav2"><Link to='/animals'>All Animals</Link></div>
+        <div className="nav3">Link</div>        
+        <div className="nav4">Link</div>
+        <div className="nav5">Link</div>
+        <div className="nav6">Link</div>        
+      </div>
     </div>
+    </nav>
   )
 }
 

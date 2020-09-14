@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./Home.js";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
@@ -69,6 +69,7 @@ class App extends Component {
   //     });
   // };
 
+  
   render(){
     return (
       <div>
@@ -81,6 +82,8 @@ class App extends Component {
 
             {/* <Route exact path="/" component={() => <AllAnimals artists = {this.state.animals} addArtist={this.addArtist} />} />
             <Route path="/artists/:id" component={(routerProps) => <ArtistDetail {...routerProps} artists = {this.state.artists} addSong={this.addSong}/>} /> */}
+            <Route path="/*" render={() => <Redirect to="/" />} />
+
           </Switch>
         </main>
         <Footer />
