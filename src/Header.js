@@ -11,10 +11,10 @@ const Header = () => {
         <div className="navTitle">Furever Home</div>
         <div className="navLogo"><img height="50px" src="../OCAS-Logo-75.png" alt="OCAS Logo" /></div>
         <div className="nav2"><Link to='/animals'>All Animals</Link></div>
-        <div className="nav3">Link</div>        
-        <div className="nav4">Link</div>
-        <div className="nav5">Link</div>
-        <div className="nav6">Link</div>        
+        <div className="nav3">Adopt!</div>        
+        <div className="nav4">Photo Gallery</div>
+        <div className="nav5">About Us</div>
+        <div className="nav6"> Contact Us</div>        
       </div>
     </div>
     </nav>

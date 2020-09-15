@@ -144,84 +144,59 @@ body{
   font-weight: bold;
 
 }
+.SpreadsheetGrid__cell_active {
+  box-shadow: inset 0 0 0 2px rgb(57, 70, 182);
+  z-index: 2;
+}
+
+
 .animalName{
   font-family: "Amatic SC";
   font-size: 50px;
   font-weight: bold;
+  padding: 10px;
 }
 .sectionTitle{
   color:black;
   font-family: "Open Sans Condensed";
   font-size: 22px;
   font-weight: bolder;
+  padding: 10px;
 }
 .sectionDetail{
   color:black;
   font-family: "Open Sans Condensed";
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
 }
-.AllAnimalsContainer{
-  background-color: grey;
+.container{
+  background-color: white;
   color: black;
-  border: 1px solid white;
-  width: 600px;
+  border: 1px solid lightgrey;
+  width: 100%;
   height: auto;
-  padding: 20px;
-  position: absolute;
+  padding: 10px;
+  position: relative;
+}
+.sectionContainer{
   display: grid;
-  grid-template-rows: 20px 20px 20px; 
-  grid-template-columns: 20px 20px 20px;
+  grid-template-rows: auto auto auto; 
+  grid-template-columns: 50% 50% ;
 }
-.anT1{
+.sectionVac{
   grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 1;
   padding:10px;
-  border-top: lightgrey 1px solid;
 }
-.anT2{
+.sectionTest{
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 2;
   grid-column-end: 2;
   padding:10px;
-  border-top: lightgrey 1px solid;
 }
-.anT3{
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 3;
-  grid-column-end: 3;
-  padding:10px;
-  border-top: lightgrey 1px solid;
-}
-.and1{
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  padding:10px;
-  border-top: lightgrey 1px solid;
-}
-.and2{
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  padding:10px;
-  border-top: lightgrey 1px solid;
-}
-.and3{
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 3;
-  padding:10px;
-  border-top: lightgrey 1px solid;
-}
-
 a:hover{
 text-decoration:none;
 color: lightgrey;
