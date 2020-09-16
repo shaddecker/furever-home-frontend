@@ -144,18 +144,7 @@ body{
   font-weight: bold;
 
 }
-.SpreadsheetGrid__cell_active {
-  box-shadow: inset 0 0 0 2px rgb(57, 70, 182);
-  z-index: 2;
-}
 
-
-.animalName{
-  font-family: "Amatic SC";
-  font-size: 50px;
-  font-weight: bold;
-  padding: 10px;
-}
 .sectionTitle{
   color:black;
   font-family: "Open Sans Condensed";
@@ -163,11 +152,19 @@ body{
   font-weight: bolder;
   padding: 10px;
 }
-.sectionDetail{
+.sectionHeader{
   color:black;
   font-family: "Open Sans Condensed";
   font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.sectionDetail{
+  color:black .5;
+  font-family: "Open Sans Condensed";
+  font-size: 20px;
   font-weight: normal;
+  padding: 10px;
 }
 .container{
   background-color: white;
@@ -180,22 +177,66 @@ body{
 }
 .sectionContainer{
   display: grid;
-  grid-template-rows: auto auto auto; 
-  grid-template-columns: 50% 50% ;
+  grid-template-rows: 200px 75px 75px auto; 
+  grid-template-columns: 33% 33% 33%;
+  position: relative;
 }
-.sectionVac{
+.sectionName{
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 1;
-  padding:10px;
+  font-family: "Amatic SC";
+  font-size: 75px;
+  font-weight: bold;
+  padding-left: 40px;
+  padding-top: 30px;
+  position: relative;
 }
-.sectionTest{
+.sectionImg{
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 2;
   grid-column-end: 2;
-  padding:10px;
+  position: relative;
+}
+.sectionAbout{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-left:10px;
+  border-top: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey;  
+  position: relative;
+}
+
+.sectionNotes{
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-left:10px;
+  border-bottom: solid 1px lightgrey;
+}
+.sectionVac{
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  padding-left:20px;
+}
+.sectionTest{
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+.sectionAdopt{
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 3;
 }
 a:hover{
 text-decoration:none;

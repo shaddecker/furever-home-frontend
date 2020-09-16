@@ -23,53 +23,29 @@ class App extends Component {
     });    
   }
  
-  addVaccination = (e) => {
+  addAnimal = (e) => {
     e.preventDefault();
-  //   let artistId = e.target.artistId.value;
-  //   axios
-  //     .post(`${backEndURL}/artists/newsong`, {
-  //       title: e.target.title.value,
-  //       artistId: e.target.artistId.value,
-  //     })
-  //     .then((response) => {
-  //       // get the correct artist from this.state.artists
-  //       let updatedArtist = this.state.artists.find((artist) => {
-  //         return artist.id == artistId;
-  //       });
-  //       // push the new song to the Song array
-  //       updatedArtist.Songs.push(response.data.song);
-  //       console.log(updatedArtist);
-  //       const newArtistArray = this.state.artists.map((artist) => {
-  //         if (artist.id == updatedArtist.id) {
-  //           return updatedArtist;
-  //         } else {
-  //           return artist;
-  //         }
-  //       });
-  //       // setState for the updated artist
-  //       this.setState({
-  //         artists: newArtistArray,
-  //       });
-  //     });
+    axios
+      .post(`${backEndURL}/animals/newanimal`, {
+        type: e.target.type.value,
+        name: e.target.name.value,
+        color: e.target.color.value,
+        coatlength: e.target.coatlength.value,
+        breed: e.target.breed.value,
+        age: e.target.age.value,
+        sex: e.target.sex.value,
+        status: e.target.status.value,
+        altered: e.target.altered.value,
+        altereddate: e.target.altereddate.value,
+        notes: e.target.notes.value,
+      })
+      .then((response) => {
+        let newAnimalArray = this.state.animals;
+        newAnimalArray.push(response.data.animal);
+        this.setState({animals: newAnimalArray});
+      });
   };
-
-  // addArtist = (e) => {
-  //   e.preventDefault();
-  //   axios
-  //     .post(`${backEndURL}/artists`, {
-  //       name: e.target.name.value,
-  //     })
-  //     .then((response) => {
-  //       console.log(response);
-  //       let tempArray = this.state.artists;
-  //       tempArray.push(response.data.artist);
-  //       this.setState({
-  //         artists: tempArray,
-  //       });
-  //     });
-  // };
-
-  
+ 
   render(){
     return (
       <div>
@@ -77,8 +53,8 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path="/" component={() => <Home />} />
-            <Route exact path="/animals" component={() => <AllAnimals animals = {this.state.animals} />} />
-            <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} addVaccination={this.addVaccination}/>} />
+            <Route exact path="/animals" component={() => <AllAnimals animals = {this.state.animals} addAnimal={this.addAnimal} />} />
+            <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} />} />
 
             {/* <Route exact path="/" component={() => <AllAnimals artists = {this.state.animals} addArtist={this.addArtist} />} />
             <Route path="/artists/:id" component={(routerProps) => <ArtistDetail {...routerProps} artists = {this.state.artists} addSong={this.addSong}/>} /> */}

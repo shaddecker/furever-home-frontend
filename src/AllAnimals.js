@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
+import './spreadsheet_grid_overrides.css'
 import { Link } from "react-router-dom";
 import { Grid } from "react-spreadsheet-grid";
 
@@ -58,6 +59,36 @@ class AllAnimals extends Component {
         rows={animals}
         getRowKey={animal => animal.id}
     />
+    <div className="sectionTitle">Add a new animal:</div>
+    <div className="sectionDetail">
+      <form onSubmit={this.props.addAnimal}>        
+        <select name="type">
+          <option>Please select type...</option>
+          <option>Canine</option>
+          <option>Feline</option>
+        </select><br/>
+        <input type="text" name="name" placeholder="name" /><br/>
+        <input type="text" name="color" placeholder="color"/><br/>
+        <input type="text" name="coatlength" placeholder="coatlength"/><br/>
+        <input type="text" name="breed" placeholder="breed"/><br/>
+        <input type="text" name="age" placeholder="age"/><br/>
+        <input type="text" name="sex" placeholder="sex"/><br/>
+        <select name="status">
+          <option>Please select status...</option>
+          <option>New</option>
+          <option>Adoptable</option>
+          <option>Probationary Adoption</option>
+        </select><br/>
+        <select name="altered">
+          <option>Spayed/Nuetered ? ...</option>
+          <option>True</option>
+          <option>False</option>          
+        </select><br/>
+        <input type="text" name="altereddate" placeholder="enter date of spay/nueter"/><br/>        
+        <textarea name="notes" placeholder="notes..."></textarea><br/>
+        <input type="submit" value="Add Animal" /><br/>
+      </form>
+    </div>
     </div>
     )    
     }
