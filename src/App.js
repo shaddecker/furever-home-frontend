@@ -23,7 +23,6 @@ class App extends Component {
     });    
   }
 
-  componentDidUpdate
  
   addAnimal = (e) => {
     e.preventDefault();
