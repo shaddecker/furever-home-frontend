@@ -41,7 +41,7 @@ class AnimalDetail extends Component{
               <div className="sectionTitle">Vaccinations:</div>            
               <ul className="sectionDetail">
                 <li key={vac.Bordetella}>Bordetella - {vac.bordetella ? vac.bordetelladate:``}</li>
-                <li  key={vac.Rabies}>Rabies - {vac.rabies ? vac.rabiesdate:``}</li>
+                <li key={vac.Rabies}>Rabies - {vac.rabies ? vac.rabiesdate:``}</li>
                 <li key={vac.Distemper}>Distemper - {vac.distemper ? vac.rabiedate:``}</li>
                 <li key={vac.Hepatitis}>Hepatitis - {vac.hepatitis ? vac.hepatitisdate:``}</li>
                 <li key={vac.Parvovirus}>Parvovirus - {vac.parvovirus ? vac.parvovirusdate:``}</li>

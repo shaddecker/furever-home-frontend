@@ -75,8 +75,8 @@ class AllAnimals extends Component {
         <input type="text" name="sex" placeholder="sex"/><br/>
         <select name="status">
           <option>Please select status...</option>
-          <option>New</option>
           <option>Adoptable</option>
+          <option>Adopted</option>          
           <option>Probationary Adoption</option>
         </select><br/>
         <select name="altered">
