@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
-import './spreadsheet_grid_overrides.css'
+import "react-spreadsheet-grid/src/grid/styles.css";
 import { Link } from "react-router-dom";
 import { Grid } from "react-spreadsheet-grid";
 

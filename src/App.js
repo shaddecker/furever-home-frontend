@@ -22,6 +22,8 @@ class App extends Component {
       this.setState({animals: response.data.animals});
     });    
   }
+
+  componentDidUpdate
  
   addAnimal = (e) => {
     e.preventDefault();
@@ -46,6 +48,29 @@ class App extends Component {
       });
   };
  
+  updateAnimal = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${backEndURL}/animals/newanimal`, {
+        type: e.target.type.value,
+        name: e.target.name.value,
+        color: e.target.color.value,
+        coatlength: e.target.coatlength.value,
+        breed: e.target.breed.value,
+        age: e.target.age.value,
+        sex: e.target.sex.value,
+        status: e.target.status.value,
+        altered: e.target.altered.value,
+        altereddate: e.target.altereddate.value,
+        notes: e.target.notes.value,
+      })
+      .then((response) => {
+        let newAnimalArray = this.state.animals;
+        newAnimalArray.push(response.data.animal);
+        this.setState({animals: newAnimalArray});
+      });
+  };
+
   render(){
     return (
       <div>
@@ -54,7 +79,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={() => <Home />} />
             <Route exact path="/animals" component={() => <AllAnimals animals = {this.state.animals} addAnimal={this.addAnimal} />} />
-            <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} />} />
+            <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} updateAnimal={this.updateAnimal} />} />
 
             {/* <Route exact path="/" component={() => <AllAnimals artists = {this.state.animals} addArtist={this.addArtist} />} />
             <Route path="/artists/:id" component={(routerProps) => <ArtistDetail {...routerProps} artists = {this.state.artists} addSong={this.addSong}/>} /> */}

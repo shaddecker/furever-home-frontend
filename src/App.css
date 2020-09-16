@@ -177,7 +177,7 @@ body{
 }
 .sectionContainer{
   display: grid;
-  grid-template-rows: 200px 75px 75px auto; 
+  grid-template-rows: 200px 150px 100px auto; 
   grid-template-columns: 33% 33% 33%;
   position: relative;
 }
@@ -206,6 +206,7 @@ body{
   grid-column-start: 1;
   grid-column-end: 4;
   padding-left:10px;
+  padding-bottom: 10px;
   border-top: solid 1px lightgrey;
   border-bottom: solid 1px lightgrey;  
   position: relative;
@@ -218,6 +219,7 @@ body{
   grid-column-end: 4;
   padding-left:10px;
   border-bottom: solid 1px lightgrey;
+  position: relative;
 }
 .sectionVac{
   grid-row-start: 4;
@@ -225,19 +227,23 @@ body{
   grid-column-start: 1;
   grid-column-end: 1;
   padding-left:20px;
+  position: relative;
 }
 .sectionTest{
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 2;
+  position: relative;
 }
 .sectionAdopt{
   grid-row-start: 4;
   grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 3;
+  position: relative;
 }
+
 a:hover{
 text-decoration:none;
 color: lightgrey;

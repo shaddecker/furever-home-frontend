@@ -2,17 +2,14 @@ import React,{Component} from 'react';
 import './App.css';
 
 class AnimalDetail extends Component{
- 
   render(){
-    
     const animalDetail = this.props.animals.find(animal => {
-      return animal.id === parseInt(this.props.match.params.id);      
+      return animal.id === parseInt(this.props.match.params.id);  
     });
     const vac = animalDetail.Vaccinations[0]
     const tests = animalDetail.Tests[0]
     const adopt = animalDetail.Adoptions[0]
-    const imageURL = `../animals/${animalDetail.name}.jpg`
-    
+    const imageURL = `../animals/${animalDetail.name}.jpg`       
 
     return (
       <div>
@@ -22,14 +19,18 @@ class AnimalDetail extends Component{
             <div className="sectionImg"><img src={imageURL} alt="" height="200px"/></div>
             <div className="sectionAbout">
               <div className="sectionTitle"></div>
-              <span className="sectionHeader">Type:</span> <span className="sectionDetail">{animalDetail.type}</span>
-              <span className="sectionHeader">Color:</span> <span className="sectionDetail">{animalDetail.color}</span>
-              <span className="sectionHeader">Coat Length:</span> <span className="sectionDetail">{animalDetail.coatlength}</span>
-              <span className="sectionHeader">Breed:</span> <span className="sectionDetail">{animalDetail.breed}</span>
-              <span className="sectionHeader">Age:</span> <span className="sectionDetail">{animalDetail.age}</span>
-              <span className="sectionHeader">Sex:</span> <span className="sectionDetail">{animalDetail.sex}</span>
-              <span className="sectionHeader">Status:</span> <span className="sectionDetail">{animalDetail.status}</span>
-              <span className="sectionHeader">Altered Date:</span> <span className="sectionDetail">{animalDetail.altereddate}</span>
+              <form onSubmit={this.props.updateAnimal}>
+                <input type="hidden" name="id" value={animalDetail.id}/>
+              <span className="sectionHeader">Type:</span> <input type="text" value={animalDetail.type} />
+              <span className="sectionHeader">Color:</span> <input type="text" value={animalDetail.color}/>
+              <span className="sectionHeader">Coat Length:</span> <input type="text" value={animalDetail.coatlength}/>
+              <span className="sectionHeader">Breed:</span> <input type="text" value={animalDetail.breed}/>
+              <span className="sectionHeader">Age:</span> <input type="text" value={animalDetail.age}/>
+              <span className="sectionHeader">Sex:</span> <input type="text" value={animalDetail.sex}/>
+              <span className="sectionHeader">Status:</span> <input type="text" value={animalDetail.status}/>
+              <span className="sectionHeader">Altered Date:</span>  <input type="text" value={animalDetail.altereddate}/><br/>
+              <input type="button" value="Update Details"/>
+              </form>
             </div>
             <div className="sectionNotes">
               <div className="sectionTitle">
@@ -38,7 +39,7 @@ class AnimalDetail extends Component{
             </div>
             <div className="sectionVac">
               <div className="sectionTitle">Vaccinations:</div>            
-              <ul className="sectionDetail"> 
+              <ul className="sectionDetail">
                 <li key={vac.Bordetella}>Bordetella - {vac.bordetella ? vac.bordetelladate:``}</li>
                 <li  key={vac.Rabies}>Rabies - {vac.rabies ? vac.rabiesdate:``}</li>
                 <li key={vac.Distemper}>Distemper - {vac.distemper ? vac.rabiedate:``}</li>
@@ -75,7 +76,6 @@ class AnimalDetail extends Component{
           </main>
       </div>
     );
-    }
+  }
 }
-
 export default AnimalDetail;
