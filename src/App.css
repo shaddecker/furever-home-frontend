@@ -144,6 +144,63 @@ body{
   font-weight: bold;
 
 }
+.homeContainer{
+  display: grid;
+  grid-template-rows: 100px 150px auto; 
+  grid-template-columns: 50% 50%;
+  position: relative;
+}
+.homeSlogan{
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  color:black;
+  font-family: "Open Sans Condensed";
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px;
+}
+.homeMission{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  color:black;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
+.homeMissionDetail{
+  color:black;
+  font-family: "Open Sans Condensed";
+  font-size: 20px;
+  font-weight: normal;
+  padding: 10px;
+}
+.homeAbout{
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  color:black;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: normal;
+  padding: 10px;
+}
+.homeImage{
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  color:black;
+  font-family: "Open Sans Condensed";
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 10px;
+}
 
 .sectionTitle{
   color:black;

@@ -15,15 +15,21 @@ class AllAnimals extends Component {
       breed: animal.breed, 
       status: animal.status,
     }));
+    const columnHeader = 
+        {color: "white",
+        fontFamily: "Open Sans Condensed",
+        backgroundColor: "black",
+        fontSize: "20px",
+        fontWeight: "bold"};
 
-    return (
+    return ( 
       <div>
       <div className="sectionTitle">Here is a list of the animals currently at the shelter:</div>
       <Grid
         columns={[
           {
             title: 'Name',
-            style: "sectionTitle",            
+            style: {columnHeader},            
             value: (animal, {focus}) => {
               return (
                 <Link to={`/animals/${animal.id}`}><span className="sectionDetail">{animal.name}</span></Link>
@@ -31,26 +37,26 @@ class AllAnimals extends Component {
             }
           },
           {
-            title: 'Sex',
-            style: "sectionTitle",
+            title: 'Sex',            
+            style: {columnHeader},
             value: (animal) => <span className="sectionDetail">{animal.sex}</span>,
             
           },
           {
             title: 'Age',
-            style: "sectionTitle",
+            style: {columnHeader},
             value: (animal) => <span className="sectionDetail">{animal.age}</span>,
             
           },
           {
             title: 'Breed',
-            style: "sectionTitle",
+            style: {columnHeader},
             value: (animal) => <span className="sectionDetail">{animal.breed}</span>,
             
           },
           {
             title: 'Status',
-            style: "sectionTitle",
+            style: {columnHeader},
             value: (animal) => <span className="sectionDetail">{animal.status}</span>,
             
           } 
@@ -58,6 +64,7 @@ class AllAnimals extends Component {
         ]}
         rows={animals}
         getRowKey={animal => animal.id}
+        
     />
     <div className="sectionTitle">Add a new animal:</div>
     <div className="sectionDetail">

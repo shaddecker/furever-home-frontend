@@ -79,11 +79,6 @@ class App extends Component {
             <Route exact path="/" component={() => <Home />} />
             <Route exact path="/animals" component={() => <AllAnimals animals = {this.state.animals} addAnimal={this.addAnimal} />} />
             <Route path="/animals/:id" component={(routerProps) => <AnimalDetail {...routerProps} animals = {this.state.animals} updateAnimal={this.updateAnimal} />} />
-
-            {/* <Route exact path="/" component={() => <AllAnimals artists = {this.state.animals} addArtist={this.addArtist} />} />
-            <Route path="/artists/:id" component={(routerProps) => <ArtistDetail {...routerProps} artists = {this.state.artists} addSong={this.addSong}/>} /> */}
-            {/* <Route path="/*" render={() => <Redirect to="/" />} /> */}
-
           </Switch>
         </main>
         <Footer />

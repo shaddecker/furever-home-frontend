@@ -11,7 +11,7 @@ class AnimalDetail extends Component{
     const adopt = animalDetail.Adoptions[0]
     const imageURL = `../animals/${animalDetail.name}.jpg`       
 
-    return (
+     return (
       <div>
         <main>          
           <div className="sectionContainer">
@@ -21,15 +21,15 @@ class AnimalDetail extends Component{
               <div className="sectionTitle"></div>
               <form onSubmit={this.props.updateAnimal}>
                 <input type="hidden" name="id" value={animalDetail.id}/>
-              <span className="sectionHeader">Type:</span> <input type="text" value={animalDetail.type} />
-              <span className="sectionHeader">Color:</span> <input type="text" value={animalDetail.color}/>
-              <span className="sectionHeader">Coat Length:</span> <input type="text" value={animalDetail.coatlength}/>
-              <span className="sectionHeader">Breed:</span> <input type="text" value={animalDetail.breed}/>
-              <span className="sectionHeader">Age:</span> <input type="text" value={animalDetail.age}/>
-              <span className="sectionHeader">Sex:</span> <input type="text" value={animalDetail.sex}/>
-              <span className="sectionHeader">Status:</span> <input type="text" value={animalDetail.status}/>
-              <span className="sectionHeader">Altered Date:</span>  <input type="text" value={animalDetail.altereddate}/><br/>
-              <input type="button" value="Update Details"/>
+                <span className="sectionHeader">Type:</span> <input type="text" value={animalDetail.type} />
+                <span className="sectionHeader">Color:</span> <input type="text" value={animalDetail.color} />
+                <span className="sectionHeader">Coat Length:</span> <input type="text" value={animalDetail.coatlength}/>
+                <span className="sectionHeader">Breed:</span> <input type="text" value={animalDetail.breed}/>
+                <span className="sectionHeader">Age:</span> <input type="text" value={animalDetail.age}/>
+                <span className="sectionHeader">Sex:</span> <input type="text" value={animalDetail.sex}/>
+                <span className="sectionHeader">Status:</span> <input type="text" value={animalDetail.status}/>
+                <span className="sectionHeader">Altered Date:</span>  <input type="text" value={animalDetail.altereddate}/><br/>
+                <input type="button" value="Update Details"/>
               </form>
             </div>
             <div className="sectionNotes">

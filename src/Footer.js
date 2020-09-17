@@ -13,7 +13,7 @@ const Footer = () => {
           Last Modified: {lastModified}
         </div>
         <div className="footerDeadSpace"></div>
-        <div className="footerLogo"><img src={logo} className="App-logo" alt="logo" /></div>
+        <div className="footerLogo"><img src={logo} height="100px" className="App-logo" alt="logo" /></div>
       </footer>
   )
 }
